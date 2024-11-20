@@ -3,8 +3,10 @@ import { TextField, Button, Stack } from "@mui/material";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import LoginLayout from "../Reusable Components/LoginLayout";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
+  const navigate = useNavigate();
   const [formValues, setFormValues] = useState({});
 
   // Form validation schema using Yup
@@ -65,7 +67,7 @@ const LoginPage = () => {
                 justifyContent="space-between"
               >
                 <Button
-                 sx={{ backgroundColor: "#16a085" }}
+                  sx={{ backgroundColor: "#16a085" }}
                   variant="contained"
                   type="submit"
                   className="px-5 py-2 font-semibold hover:bg-[#1abc9c] shadow-lg shadow-black/20"
@@ -76,7 +78,9 @@ const LoginPage = () => {
                   variant="contained"
                   sx={{ backgroundColor: "#e74c3c" }}
                   className="px-5 py-2 font-semibold hover:bg-[#c0392b] shadow-lg shadow-black/20"
-                  onClick={() => alert("Navigate to Register Page")}
+                  onClick={() => {
+                    navigate("/register");
+                  }}
                 >
                   Register
                 </Button>
