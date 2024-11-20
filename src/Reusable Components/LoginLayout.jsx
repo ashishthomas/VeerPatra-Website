@@ -1,23 +1,27 @@
-import React from 'react';
-import { Box,Stack } from "@mui/material";
+import React from "react";
+import { Box, Typography } from "@mui/material";
 
-const LoginLayout = ({children}) => {
+const LoginLayout = ({ children, height = "", title }) => {
   return (
-   
     <Box
-    sx={{
-      minHeight: "100vh",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      backgroundImage: `url('https://cdn.pixabay.com/photo/2023/08/30/09/34/ai-generated-8222940_1280.png')`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      overflow: "hidden",
-    }}>
-    <Box
+      sx={{
+        minHeight: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundImage: `url('https://cdn.pixabay.com/photo/2023/08/30/09/34/ai-generated-8222940_1280.png')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        overflow: "hidden",
+      }}
+    >
+      <Box
         sx={{
+          display: "flex",
+          justifyItems: "center",
+          alignItems: "center",
+          minHeight: height,
           width: { xs: "90%", sm: "80%", md: "50%", lg: "35%", xl: "30%" }, // Responsive width
           padding: 3,
           backgroundColor: "rgba(255, 255, 255, 0.7)", // Lighter and more transparent background
@@ -31,11 +35,23 @@ const LoginLayout = ({children}) => {
           },
         }}
       >
-        {children}
+        <div style={{flexBasis:"100%"}}>
+          <Typography
+            variant="h4"
+            align="center"
+            sx={{
+              marginBottom: 2,
+              color: "#2c3e50",
+              fontWeight: "bold",
+            }}
+          >
+            {title}
+          </Typography>
+          {children}
+        </div>
       </Box>
-     </Box> 
-  
-  )
-}
+    </Box>
+  );
+};
 
-export default LoginLayout
+export default LoginLayout;
