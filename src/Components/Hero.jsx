@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Box, Typography, IconButton } from "@mui/material";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
-import img1 from "../util/Images/1.webp";
-import img2 from "../util/Images/2.webp";
-import img3 from "../util/Images/3.webp";
+import img1 from "../utils/images/1.webp"
+import img2 from '../utils/images/2.webp';
+import img3 from '../utils/images/3.webp';
+
 
 const Carousel = () => {
   const images = [

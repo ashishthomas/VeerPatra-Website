@@ -1,9 +1,9 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import { FormControl, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
 import * as Yup from "yup";
-import { Form, useFormik, Field } from "formik";
+import { useFormik } from "formik";
 import LoginLayout from "../Reusable Components/LoginLayout";
 
 const RegisterPage = () => {
@@ -49,7 +49,7 @@ const RegisterPage = () => {
         <Stack spacing={2}>
           <div>
             <TextField
-              sx={{ width: "100%" }}
+              className="w-full"
               label="Username"
               name="userName"
               variant="outlined"
@@ -67,7 +67,7 @@ const RegisterPage = () => {
           </div>
           <div>
             <TextField
-              sx={{ width: "100%" }}
+              className="w-full"
               label="Email"
               name="email"
               type="email"
@@ -83,12 +83,11 @@ const RegisterPage = () => {
               helperText={
                 formikDetails.touched.email && formikDetails.errors.email
               }
-              className="w-full"
             />
           </div>
           <div>
             <TextField
-              sx={{ width: "100%" }}
+              className="w-full"
               label="Password"
               name="password"
               type="password"
@@ -104,12 +103,11 @@ const RegisterPage = () => {
               helperText={
                 formikDetails.touched.password && formikDetails.errors.password
               }
-              className="w-full"
             />
           </div>
           <div>
             <TextField
-              sx={{ width: "100%" }}
+              className="w-full"
               label="Confirm Password"
               name="confirmPassword"
               type="password"
@@ -126,7 +124,6 @@ const RegisterPage = () => {
                 formikDetails.touched.confirmPassword &&
                 formikDetails.errors.confirmPassword
               }
-              className="w-full"
             />
           </div>
           <div>
@@ -135,7 +132,7 @@ const RegisterPage = () => {
               variant="contained"
               color="primary"
               fullWidth
-              className="mt-4 px-5 py-2 font-semibold  hover:bg-[#1abc9c] shadow-md hover:shadow-lg"
+              className="mt-4 px-5 py-2 font-semibold hover:bg-[#1abc9c] shadow-md hover:shadow-lg"
               type="submit"
             >
               SUBMIT

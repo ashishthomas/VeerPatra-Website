@@ -4,7 +4,7 @@ import TestimonialCard from "../Reusable Components/TestimonialCard";
 
 function Testimonial() {
   return (
-    <div className="w-full min-h-screen bg-white flex flex-col justify-center items-center mt-20">
+    <div className="w-full min-h-screen bg-white flex flex-col justify-center items-center mt-2">
   <Container className="bg-slate-100 py-10 px-4">
     {/* Header Section */}
     <Container className="mb-8 text-center">
