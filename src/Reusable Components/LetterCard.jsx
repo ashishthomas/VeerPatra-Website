@@ -46,12 +46,11 @@ const LetterCard = ({ letterData }) => {
   return (
     <div>
       <Card
+      className="w-[17rem] h-[70vh]"
         sx={{
-          width: 300,
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between", // Ensures content is spaced correctly
-          height: 600,
           borderRadius: 2,
           boxShadow: 10,
         }}
