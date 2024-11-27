@@ -7,6 +7,7 @@ import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { styled } from "@mui/material/styles";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import  bgFileUpload  from "../util/images/soldier.webp"
 
 const quotes = [
   "Your words may seem small, but to a soldier, they can feel like home.",
@@ -91,8 +92,9 @@ export default function FileUploadForm() {
   };
 
   return (
-    <div className='bg-[url("C:/Users/Hp/Desktop/operation_Gratitude/public/soldier.webp")] flex flex-col justify-center items-center gap-10 p-10 h-screen w-auto border-2 border-solid border-black bg-no-repeat bg-cover bg-center'>
-      <div className="flex flex-col justify-center items-center gap-6 shadow-2xl mt-5 p-5 bg-opacity-80 bg-slate-100 sm:w-[90%] md:w-[70%] lg:w-[50%] sm:h-[80%] md:h-[90%] rounded-xl">
+    <div style={{backgroundImage:`url(${bgFileUpload})`}} className=' flex flex-col justify-center items-center gap-10 p-10 h-screen w-auto border-2 border-solid border-black bg-no-repeat bg-cover bg-center'>
+      
+      <div className="flex flex-col justify-center items-center gap-6 shadow-2xl mt-5 p-2 bg-opacity-80 bg-slate-100 sm:w-[90%] md:w-[70%] lg:w-[50%] sm:h-[80%] md:h-[95%] rounded-xl">
         {/* <LocalizationProvider dateAdapter={AdapterDayjs}> */}
         <p className="font-bold text-center text-xl ">
           {quotes[currentQuoteIndex]}
@@ -133,8 +135,8 @@ export default function FileUploadForm() {
 
         {/* Preview */}
         {filePreview && (
-          <div className="h-auto w-[45%]">
-            <img src={filePreview} alt="Preview" />
+          <div className=" w-[45%]" >
+            <img className="h-[25vh] w-[100%] object-fill" src={filePreview} alt="Preview" />
           </div>
         )}
 
