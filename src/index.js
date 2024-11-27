@@ -23,7 +23,7 @@ const route = createBrowserRouter([
     element: <RegisterPage />,
   },
   {
-    path: "formUpload",
+    path: "/formUpload",
     element: <FileUploadForm />,
   },
   {
