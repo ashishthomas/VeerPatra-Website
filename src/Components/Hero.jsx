@@ -3,7 +3,7 @@ import { Box, Typography, IconButton } from "@mui/material";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 import img1 from "../utils/images/1.webp"
 import img2 from '../utils/images/2.webp';
-import img3 from '../utils/images/3.webp';
+import img3 from '../utils/images/soldier.webp';
 
 
 const Carousel = () => {
@@ -22,6 +22,11 @@ const Carousel = () => {
       src:  img1 ,
       title: "Third slide label",
       text: "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
+    },
+    {
+      src:  img3 ,
+      title: "Fifth slide label",
+      text: "Cras ultricies ligula sed magna dictum porta.",
     },
     {
       src:  img2 ,
@@ -61,17 +66,18 @@ const Carousel = () => {
   return (
     <Box
       position="relative"
-      width="100%"
+      top="15%"
+      // width="100%"
       bgcolor="black"
       overflow="hidden"
-      className="h-[90vh] sm:60vh md:70vh"
+      className="h-[100vh] sm:60vh md:70vh"
     //   sx={{ height: { xs: "60vh", md: "70vh" } }}
     >
       {/* Carousel Inner */}
       {images.map((image, index) => (
         <Box
           key={index}
-          className={`absolute top-0 left-0 w-full h-full ${index === activeIndex ? "block" : "hidden"} z-[1]`}
+          className={`absolute top-1 left-0 w-full ${index === activeIndex ? "block" : "hidden"} z-[1]`}
         >
           <img
             src={image.src}
