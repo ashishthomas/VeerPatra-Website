@@ -23,7 +23,7 @@ const Navbar = ({ isLoggedIn }) => {
     { href: "/about", label: "About" },
     { href: "/media", label: "Media" },
     { href: "#contact", label: "Contact" },
-    { href: "#upload", label: "Upload Letters" },
+    { href: "/formUpload", label: "Upload_Letters" },
     { href: "/login", label: "Login" },
     { href: "/register", label: "Register" },
   ];
