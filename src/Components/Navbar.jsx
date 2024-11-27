@@ -12,21 +12,20 @@ import {
   Typography,
 } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material";
-import Logo from "../util/Images/Logo.jpg";
-import Hero from "./Hero";
-import InternalNav from "./InternalNav";
+import Logo from "../utils/images/Logo.jpg";
 
 const Navbar = ({ isLoggedIn }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Links for navbar
   const links = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/media", label: "Media" },
     { href: "#contact", label: "Contact" },
     { href: "#upload", label: "Upload Letters" },
-    { href: "#login", label: "Login" },
-    { href: "#register", label: "Register" },
+    { href: "/login", label: "Login" },
+    { href: "/register", label: "Register" },
   ];
 
   const linkClasses =
@@ -34,7 +33,7 @@ const Navbar = ({ isLoggedIn }) => {
 
   return (
     <header>
-      <Box className="bg-gradient-to-b from-orange-400 via-white to-green-700 shadow-md fixed w-[100%] top-0 z-50">
+      <Box className="bg-gradient-to-r from-orange-400 via-white to-green-500 shadow-md fixed w-[100%] top-0 z-50">
         {/* bg-gradient-to-r from-blue-900 via-indigo-700 to-blue-900 sticky top-0 z-50 */}
         <Toolbar className="flex items-center ">
           {/* Logo with Hover Effect */}
@@ -121,7 +120,6 @@ const Navbar = ({ isLoggedIn }) => {
         </Box>
       </Drawer>
       {/* <InternalNav/> */}
-      <Hero />
     </header>
   );
 };

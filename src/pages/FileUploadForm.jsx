@@ -7,7 +7,7 @@ import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { styled } from "@mui/material/styles";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { bgFileUpload } from "../util/constants";
+import { bgFileUpload } from "../utils/constants";
 
 const quotes = [
   "Your words may seem small, but to a soldier, they can feel like home.",
