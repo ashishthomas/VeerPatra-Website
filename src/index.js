@@ -7,12 +7,16 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import FileUploadForm from "./pages/FileUploadForm";
+import Testimonial from "./pages/Testimonial";
+import Footer from "./pages/Footer";
+import Faq from "./pages/Faq";
+import HomePage from "./pages/HomePage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const route = createBrowserRouter([
   {
     path: "/",
-    element: <LoginPage />,
+    element: <HomePage />,
   },
   {
     path: "/register",
