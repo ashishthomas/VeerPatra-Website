@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  Avatar,
   Box,
   Button,
   Drawer,
@@ -13,6 +12,8 @@ import {
 } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material";
 import Logo from "../utils/images/Logo.jpg";
+import { Link } from "react-router-dom";
+import { orange } from "@mui/material/colors";
 
 const Navbar = ({ isLoggedIn }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,7 +38,7 @@ const Navbar = ({ isLoggedIn }) => {
         {/* bg-gradient-to-r from-blue-900 via-indigo-700 to-blue-900 sticky top-0 z-50 */}
         <Toolbar className="flex items-center ">
           {/* Logo with Hover Effect */}
-          <Box className="flex items-center basis-[70%]">
+          <Box className="flex items-center basis-[90%]">
             <img
               src={Logo}
               alt="Logo"
@@ -59,21 +60,14 @@ const Navbar = ({ isLoggedIn }) => {
             {links.map((link, index) =>
               (link.label === "Upload Letters" && isLoggedIn) ||
               link.label !== "Upload Letters" ? (
-                <Button
-                  className="text-zinc-50 hover:text-orange-600 font-[800]"
-                  key={index}
-                  href={link.href}
-                  sx={
-                    {
-                      // "&:hover": {
-                      //   background: "linear-gradient(to right, #3B82F6, #9333EA)",
-                      //   transform: "scale(1.1)",
-                      // },
-                    }
-                  }
-                >
-                  {link.label}
-                </Button>
+                <Link to={link.href}>
+                  <Button
+                    className="text-zinc-50 hover:text-orange-600 font-[800] hover:scale-110"
+                    key={index}
+                  >
+                    {link.label}
+                  </Button>
+                </Link>
               ) : null
             )}
           </Box>
@@ -83,36 +77,35 @@ const Navbar = ({ isLoggedIn }) => {
             color="inherit"
             aria-label="menu"
             onClick={() => setMenuOpen(true)}
-            sx={{ display: { xs: "block", md: "none" } }}
+            sx={{ display: { xs: "block", md: "none" }, color: 'blue' }}
           >
             <MenuIcon />
           </IconButton>
-
-          {/* Avatar */}
-          <div className="basis-[10%] flex justify-end">
-            <Avatar
-              alt="User Avatar"
-              src="https://mui.com/static/images/avatar/1.jpg"
-              sx={{
-                width: 50,
-                height: 50,
-                border: "2px solid white",
-                "&:hover": { boxShadow: "0px 0px 10px #fff" },
-              }}
-            />
-          </div>
         </Toolbar>
       </Box>
 
       {/* Mobile Menu Drawer */}
       <Drawer anchor="left" open={menuOpen} onClose={() => setMenuOpen(false)}>
-        <Box sx={{ width: 250 }} role="presentation">
+        <Box
+          sx={{ width: 200, background: `linear-gradient(to bottom, #FF9933, #FFFFFF, #138808)`, height: "100%" }}
+          role="presentation"
+        >
           <List>
             {links.map((link, index) =>
               (link.label === "Upload Letters" && isLoggedIn) ||
               link.label !== "Upload Letters" ? (
                 <ListItem button key={index} onClick={() => setMenuOpen(false)}>
-                  <ListItemText primary={link.label} />
+                  <Link
+                    to={link.href}
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    className="font-extrabold"
+                  >
+                    <ListItemText
+                      primary={link.label}
+                      sx={{ "& .MuiTypography-root": { fontWeight: "500" }, color: 'blue' }}
+                      // Apply bold styling
+                    />
+                  </Link>
                 </ListItem>
               ) : null
             )}
