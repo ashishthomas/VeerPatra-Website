@@ -21,9 +21,9 @@ const Navbar = ({ isLoggedIn }) => {
   // Links for navbar
   const links = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
     { href: "/media", label: "Media" },
     { href: "/contact", label: "Contact" },
+    { href: "/about", label: "About" },
     { href: "/formUpload", label: "UploadLetters" },
     { href: "/login", label: "Login" },
     { href: "/register", label: "Register" },
@@ -77,7 +77,7 @@ const Navbar = ({ isLoggedIn }) => {
             color="inherit"
             aria-label="menu"
             onClick={() => setMenuOpen(true)}
-            sx={{ display: { xs: "block", md: "none" }, color: 'blue' }}
+            sx={{ display: { xs: "block", md: "none" }, color: "blue" }}
           >
             <MenuIcon />
           </IconButton>
@@ -87,7 +87,11 @@ const Navbar = ({ isLoggedIn }) => {
       {/* Mobile Menu Drawer */}
       <Drawer anchor="left" open={menuOpen} onClose={() => setMenuOpen(false)}>
         <Box
-          sx={{ width: 200, background: `linear-gradient(to bottom, #FF9933, #FFFFFF, #138808)`, height: "100%" }}
+          sx={{
+            width: 200,
+            background: `linear-gradient(to bottom, #FF9933, #FFFFFF, #138808)`,
+            height: "100%",
+          }}
           role="presentation"
         >
           <List>
@@ -102,7 +106,10 @@ const Navbar = ({ isLoggedIn }) => {
                   >
                     <ListItemText
                       primary={link.label}
-                      sx={{ "& .MuiTypography-root": { fontWeight: "500" }, color: 'blue' }}
+                      sx={{
+                        "& .MuiTypography-root": { fontWeight: "500" },
+                        color: "blue",
+                      }}
                       // Apply bold styling
                     />
                   </Link>

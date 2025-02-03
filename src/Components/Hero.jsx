@@ -1,40 +1,34 @@
 import React, { useState, useEffect } from "react";
 import { Box, Typography, IconButton } from "@mui/material";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
-import img1 from "../utils/images/1.webp"
-import img2 from '../utils/images/2.webp';
-import img3 from '../utils/images/soldier.webp';
-
+import img1 from "../utils/images/1.webp";
+import img2 from "../utils/images/2.webp";
+import img3 from "../utils/images/soldier.webp";
 
 const Carousel = () => {
   const images = [
     {
-      src: img1 ,
+      src: img1,
       title: "First slide label",
       text: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
     },
     {
-      src:  img2 ,
+      src: img2,
       title: "Second slide label",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
-      src:  img1 ,
+      src: img1,
       title: "Third slide label",
       text: "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
     },
     {
-      src:  img3 ,
-      title: "Fifth slide label",
-      text: "Cras ultricies ligula sed magna dictum porta.",
-    },
-    {
-      src:  img2 ,
+      src: img3,
       title: "Fourth slide label",
       text: "Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.",
     },
     {
-      src:  img3 ,
+      src: img2,
       title: "Fifth slide label",
       text: "Cras ultricies ligula sed magna dictum porta.",
     },
@@ -49,7 +43,7 @@ const Carousel = () => {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   // Handle next slide
   const handleNext = () => {
@@ -66,34 +60,31 @@ const Carousel = () => {
   return (
     <Box
       position="relative"
-      top="15%"
-      // width="100%"
       bgcolor="black"
       overflow="hidden"
       className="h-[100vh] sm:60vh md:70vh"
-    //   sx={{ height: { xs: "60vh", md: "70vh" } }}
     >
       {/* Carousel Inner */}
       {images.map((image, index) => (
         <Box
           key={index}
-          className={`absolute top-1 left-0 w-full ${index === activeIndex ? "block" : "hidden"} z-[1]`}
+          className={`absolute top-0 left-0 w-full h-full ${
+            index === activeIndex ? "block" : "hidden"
+          } z-[1]`}
         >
           <img
             src={image.src}
             alt={image.title}
-            className="w-screen h-screen object-cover"
+            className="w-full h-full object-cover"
           />
-          <Box
-            className="absolute bottom-0 left-0 right-0 py-2 px-3 bg-black bg-opacity-50 text-white text-center"
-          >
+          <Box className="absolute bottom-0 left-0 right-0 py-2 px-3 bg-black bg-opacity-50 text-white text-center">
             <Typography variant="h6">{image.title}</Typography>
             <Typography variant="body2">{image.text}</Typography>
           </Box>
         </Box>
       ))}
 
-      {/* Left control */}
+      {/* Left Control */}
       <IconButton
         onClick={handlePrev}
         size="large"
@@ -109,19 +100,18 @@ const Carousel = () => {
         <ArrowBackIos />
       </IconButton>
 
-      {/* Right control */}
+      {/* Right Control */}
       <IconButton
         onClick={handleNext}
         size="large"
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white z-[2]"
-        // sx={{
-        //   position: "absolute",
-        //   top: "50%",
-        //   right: "16px",
-        //   transform: "translateY(-50%)",
-        //   color: "white",
-        //   zIndex: 2,
-        // }}
+        sx={{
+          position: "absolute",
+          top: "50%",
+          right: "16px", // Positioned on the right
+          transform: "translateY(-50%)",
+          color: "white",
+          zIndex: 2,
+        }}
       >
         <ArrowForwardIos />
       </IconButton>

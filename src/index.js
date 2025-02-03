@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "../src/pages/LoginPage";
 import Spinner from "./Reusable Components/Spinner";
 import About from "./pages/About";
+import ContactUs from "./pages/ContactUs";
 
 const Media = lazy(() => import("./pages/Media"));
 
@@ -42,6 +43,10 @@ const route = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/contact",
+    element: <ContactUs />,
   },
 ]);
 root.render(

@@ -39,7 +39,8 @@ const About = () => {
 
           <div className="w-full md:w-full lg:w-1/2 m-5">
             <img
-              src="https://via.placeholder.com/600x400?text=Indian+Soldiers"
+              // src="https://via.placeholder.com/600x400?text=Indian+Soldiers"
+              src="https://img.freepik.com/premium-photo/group-soldiers-stand-backwards-front-india-flag-patriotism-military-procedure-flag-symbolism-symbolism-standing-attention-training-techniques_918839-12741.jpg"
               alt="A group of Indian soldiers standing together during a mission"
               className="w-full h-auto object-cover rounded-lg"
             />
