@@ -107,7 +107,7 @@ const Carousel = () => {
         sx={{
           position: "absolute",
           top: "50%",
-          right: "16px", // Positioned on the right
+          right: "16px",
           transform: "translateY(-50%)",
           color: "white",
           zIndex: 2,
