@@ -35,7 +35,6 @@ const Navbar = ({ isLoggedIn }) => {
   return (
     <header>
       <Box className="bg-gradient-to-r from-orange-400 via-white to-green-500 shadow-md fixed w-[100%] top-0 z-50">
-        {/* bg-gradient-to-r from-blue-900 via-indigo-700 to-blue-900 sticky top-0 z-50 */}
         <Toolbar className="flex items-center ">
           {/* Logo with Hover Effect */}
           <Box className="flex items-center basis-[90%]">
@@ -110,7 +109,6 @@ const Navbar = ({ isLoggedIn }) => {
                         "& .MuiTypography-root": { fontWeight: "500" },
                         color: "blue",
                       }}
-                      // Apply bold styling
                     />
                   </Link>
                 </ListItem>

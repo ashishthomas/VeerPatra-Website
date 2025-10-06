@@ -43,41 +43,6 @@ function ContactUs() {
             <Mail />
             &nbsp;&nbsp;team3@gmail.com
           </Typography>
-
-          {/* code2 */}
-
-          {/* <Typography variant="h6" className="mt-10 text-gray-800">
-            How can we help you?
-          </Typography>
-
-          <Typography
-            variant="h4"
-            className="font-bold text-[30px] md:text-[40px] text-gray-900"
-          >
-            Contact Us
-          </Typography>
-
-          <Typography variant="body1" className="text-gray-600 mt-4">
-            We are here to help and answer any questions you might have. We look
-            forward to hearing from you!
-          </Typography>
-
-          <Box className="space-y-4 mt-6 text-sm md:text-base text-gray-700">
-            <Typography variant="body1" className="flex items-center">
-              <LocationCity className="mr-2" />
-              6th Phase, Banashankri, Bengaluru
-            </Typography>
-
-            <Typography variant="body1" className="flex items-center">
-              <Phone className="mr-2" />
-              +2536145263
-            </Typography>
-
-            <Typography variant="body1" className="flex items-center">
-              <Mail className="mr-2" />
-              team3@gmail.com
-            </Typography>
-          </Box> */}
         </motion.div>
 
         {/* Right Image Box (Animated) */}

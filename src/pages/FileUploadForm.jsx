@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import { LocalizationProvider } from "@mui/x-date-pickers";
-// import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
@@ -99,7 +97,6 @@ export default function FileUploadForm() {
         className="mt-[9vh] flex flex-col justify-center items-center gap-10 p-10 h-screen w-auto border-2 border-solid border-black bg-no-repeat bg-cover bg-center"
       >
         <div className="flex flex-col justify-center items-center gap-6 shadow-2xl mt-5 p-2 bg-opacity-80 bg-slate-100 sm:w-[90%] md:w-[70%] lg:w-[50%] sm:h-[80%] md:h-[95%] rounded-xl">
-          {/* <LocalizationProvider dateAdapter={AdapterDayjs}> */}
           <p className="font-bold text-center text-xl ">
             {quotes[currentQuoteIndex]}
           </p>
