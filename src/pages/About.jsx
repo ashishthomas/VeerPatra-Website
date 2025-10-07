@@ -19,9 +19,9 @@ const About = () => {
               {aboutText.subtitle}
             </p>
 
-            {aboutText.paragraphs.map((text, index) => (
-              <p key={index} className="mb-3 sm:mb-4">
-                {text}
+            {aboutText.paragraphs.map((para) => (
+              <p key={para.id} className="mb-3 sm:mb-4">
+                {para.text}
               </p>
             ))}
           </div>
