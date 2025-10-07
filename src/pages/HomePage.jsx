@@ -1,4 +1,3 @@
-import React from "react";
 import Testimonial from "./Testimonial";
 import Faq from "./Faq";
 import Gallery from "./Gallery";

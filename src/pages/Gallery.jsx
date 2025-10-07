@@ -1,4 +1,3 @@
-import React from "react";
 import LetterCard from "../Reusable Components/LetterCard";
 import { letters } from "../utils/constants";
 import { Box } from "@mui/material";

@@ -5,7 +5,7 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
-import React from "react";
+
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 
 function TestimonialCard({ name, image, feedback }) {
