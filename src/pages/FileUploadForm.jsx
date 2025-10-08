@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
@@ -7,18 +7,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import bgFileUpload from "../utils/images/soldier.webp";
 import PageLayout from "../Components/PageLayout";
-
-const quotes = [
-  "Your words may seem small, but to a soldier, they can feel like home.",
-  "A letter is a gift soldiers never forget.",
-  "Brighten a soldier's day with your kind words.",
-  "Small gestures, like letters, create lasting memories.",
-  "Let soldiers feel your gratitude through a letter.",
-  "Your message could be a soldier’s source of hope.",
-  "Every letter tells a soldier they're not forgotten.",
-  "Your kindness in words travels farther than you know.",
-  "Make a soldier smile with your thoughtful words.",
-];
+import { soldierQuotes } from "../data/quotesData";
 
 const VisuallyHiddenInput = styled("input")({
   clip: "rect(0 0 0 0)",
@@ -39,9 +28,10 @@ export default function FileUploadForm() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentQuoteIndex((prevIndex) => (prevIndex + 1) % quotes.length);
+      setCurrentQuoteIndex(
+        (prevIndex) => (prevIndex + 1) % soldierQuotes.length
+      );
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -55,7 +45,7 @@ export default function FileUploadForm() {
       .required("File is required")
       .test(
         "fileType",
-        "Only JPEG, JPG, WEBP, and  PNG files are allowed",
+        "Only JPEG, JPG, WEBP, and PNG files are allowed",
         (value) =>
           value &&
           ["image/jpeg", "image/png", "image/webp", "image/jpg"].includes(
@@ -97,11 +87,10 @@ export default function FileUploadForm() {
         className="mt-[9vh] flex flex-col justify-center items-center gap-10 p-10 h-screen w-auto border-2 border-solid border-black bg-no-repeat bg-cover bg-center"
       >
         <div className="flex flex-col justify-center items-center gap-6 shadow-2xl mt-5 p-2 bg-opacity-80 bg-slate-100 sm:w-[90%] md:w-[70%] lg:w-[50%] sm:h-[80%] md:h-[95%] rounded-xl">
-          <p className="font-bold text-center text-xl ">
-            {quotes[currentQuoteIndex]}
+          <p className="font-bold text-center text-xl">
+            {soldierQuotes[currentQuoteIndex]}
           </p>
 
-          {/* Description */}
           <TextField
             className="w-[45%] text-gray overflow-ellipsis"
             id="description"
@@ -114,10 +103,9 @@ export default function FileUploadForm() {
             onBlur={formik.handleBlur}
           />
           {formik.touched.description && formik.errors.description && (
-            <p className="   text-red-500">{formik.errors.description}</p>
+            <p className="text-red-500">{formik.errors.description}</p>
           )}
 
-          {/* Upload Button */}
           <Button
             className="w-[45%]"
             component="label"
@@ -131,12 +119,11 @@ export default function FileUploadForm() {
             <VisuallyHiddenInput type="file" onChange={handleFileChange} />
           </Button>
           {formik.touched.file && formik.errors.file && (
-            <p className="  text-red-600">{formik.errors.file}</p>
+            <p className="text-red-600">{formik.errors.file}</p>
           )}
 
-          {/* Preview */}
           {filePreview && (
-            <div className=" w-[45%]">
+            <div className="w-[45%]">
               <img
                 className="h-[25vh] w-[100%] object-fill"
                 src={filePreview}
@@ -145,7 +132,6 @@ export default function FileUploadForm() {
             </div>
           )}
 
-          {/* Submit Button */}
           <Button
             sx={{ backgroundColor: "#16a085" }}
             className="w-[45%] p-2"
@@ -154,7 +140,6 @@ export default function FileUploadForm() {
           >
             Submit
           </Button>
-          {/* </LocalizationProvider> */}
         </div>
       </div>
     </PageLayout>
