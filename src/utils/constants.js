@@ -43,13 +43,21 @@ export const letters = [
     description: "Letter to the Soldier.",
     imageId: "img_006",
     imageAddress:
-      "https://blogs.bl.uk/.a/6a00d8341c464853ef01b7c7d296f4970b-500wi",
+      "https://media.iwm.org.uk/cantaloupe/iiif/2/271%7C%7C853%7C%7C000000.jpg/full/510,/0/default.jpg",
     username: "Roopa Sharma",
+  },
+  {
+    date: "13/12/2013",
+    description: "Letter to the soldier",
+    imageId: "img_007",
+    imageAddress:
+      "https://media.iwm.org.uk/cantaloupe/iiif/2/2%7C%7C10%7C%7C915%7C%7Clarge_Documents_027066.jpg/full/510,/0/default.jpg",
+    username: "Ashish Thomas",
   },
   {
     date: "14/02/2017",
     description: "Letter to the Soldier.",
-    imageId: "img_007",
+    imageId: "img_008",
     imageAddress:
       "https://images.ctfassets.net/i01duvb6kq77/c745836ecc2f9d52a2e58f909bfdde6a/9091e77126eb28bb1e455a546157e9c6/Letters-from-Indian-Soldiers-in-France-02.jpg",
     username: "Datta Singh",
@@ -57,7 +65,7 @@ export const letters = [
   {
     date: "01/11/1918",
     description: "Letter to the Soldier.",
-    imageId: "img_008",
+    imageId: "img_009",
     imageAddress:
       "https://i.redd.it/1918-letter-to-the-wife-of-a-soldier-v0-ooe11p60971c1.jpg?width=2083&format=pjpg&auto=webp&s=5c0af03f85c463ef2380e6cb360035319a6c733b",
     username: "Vittal Das",
@@ -65,7 +73,7 @@ export const letters = [
   {
     date: "20/06/2014",
     description: "Letter to the Soldier.",
-    imageId: "img_009",
+    imageId: "img_010",
     imageAddress:
       "https://writingsinrhyme.com/wp-content/uploads/2014/08/Letter-to-an-Unknown-Soldier.jpg",
     username: "Sameer King",
@@ -73,22 +81,23 @@ export const letters = [
   {
     date: "07/03/1939",
     description: "Letter to the Soldier.",
-    imageId: "img_010",
+    imageId: "img_011",
     imageAddress:
       "https://www.keystonecollaborative.org/wp-content/uploads/2016/11/operation-gratitude.jpg",
     username: "Ashwini Patel",
   },
+
   {
     date: "11/09/2020",
     description: "Letter to the Soldier.",
-    imageId: "img_011",
+    imageId: "img_012",
     imageAddress: "https://pbs.twimg.com/media/E-0syoRUUAAD75w.jpg",
     username: "Kumar Rao",
   },
   {
     date: "03/06/1945",
     description: "Letter to the Soldier.",
-    imageId: "img_012",
+    imageId: "img_013",
     imageAddress:
       "https://pbs.twimg.com/media/Dm0S7kLVsAAWUkE?format=jpg&name=4096x4096",
     username: "Karan Patel",
@@ -96,7 +105,7 @@ export const letters = [
   {
     date: "15/02/2019",
     description: "Letter to the Soldier.",
-    imageId: "img_013",
+    imageId: "img_014",
     imageAddress:
       "https://lh6.googleusercontent.com/proxy/LeceQshTzP11D-cKbnTErDA1rZsVHQiZyW0yG7W20jMoCLuJDZyLxOHvfqy5w3iYIEMEMMDvTmdVK-IqLnqwLoT5ZSSqRR0ao2NOcj2p7RoVPAybRHrpm6RIxiROGsopawz780QZ3uy5EC3QExf5xaYbHKKHHgTwL9R_5Jze_nlp6i07e_yrrbh0NDGe0wEsAw",
     username: "Liam Johnson",
@@ -104,45 +113,45 @@ export const letters = [
   {
     date: "01/05/2016",
     description: "Letter to the Soldier.",
-    imageId: "img_014",
+    imageId: "img_015",
     imageAddress:
-      "https://www.forgottensoldiers.org/wp-content/uploads/2010/05/thankyoufromrebecca.jpg",
+      "https://media.iwm.org.uk/cantaloupe/iiif/2/2%7C%7C10%7C%7C913%7C%7Clarge_Documents_013627.jpg/full/510,/0/default.jpg",
     username: "Sophia Anderson",
   },
   {
     date: "22/08/2018",
     description: "Letter to the Soldier.",
-    imageId: "img_015",
+    imageId: "img_016",
     imageAddress:
-      "https://www.forgottensoldiers.org/wp-content/uploads/2015/08/letterfromsoldiers.jpg",
+      "https://media.iwm.org.uk/cantaloupe/iiif/2/353%7C%7C93%7C%7Clarge_000000.jpg/full/510,/0/default.jpg",
     username: "Noah Evans",
   },
   {
     date: "05/01/2014",
     description: "Letter to the Soldier.",
-    imageId: "img_016",
+    imageId: "img_017",
     imageAddress: "https://tse1.mm.bing.net/th?q=letters%20for%20troops",
     username: "Emma Wilson",
   },
   {
     date: "12/09/2015",
     description: "Letter to the Soldier.",
-    imageId: "img_017",
+    imageId: "img_018",
     imageAddress:
-      "https://icatholic.dioslc.org/images/editions/2015-07-24/note.jpg",
+      "https://media.iwm.org.uk/cantaloupe/iiif/2/2%7C%7C10%7C%7C900%7C%7Clarge_Documents_025371.jpg/full/510,/0/default.jpg",
     username: "Oliver Brown",
   },
   {
     date: "09/03/2020",
     description: "Letter to the Soldier.",
-    imageId: "img_018",
+    imageId: "img_019",
     imageAddress: "https://pbs.twimg.com/media/CwYCm8vUsAAJFjc.jpg:large",
     username: "Ava Martinez",
   },
   {
     date: "30/07/2020",
     description: "Letter to the Soldier.",
-    imageId: "img_019",
+    imageId: "img_020",
     imageAddress:
       "https://nfmlending.com/wp-content/uploads/2020/09/Destiny-Gaylord_Page_2-1024x683.png",
     username: "Elijah Davis",
@@ -150,14 +159,14 @@ export const letters = [
   {
     date: "05/11/2015",
     description: "Letter to the Soldier.",
-    imageId: "img_020",
+    imageId: "img_021",
     imageAddress: "https://pbs.twimg.com/media/Cv7RIUpUsAAUPsI.jpg:large",
     username: "Isabella Hernandez",
   },
   {
     date: "22/12/2016",
     description: "Letter to the Soldier.",
-    imageId: "img_021",
+    imageId: "img_022",
     imageAddress:
       "https://www.inspiremore.com/wp-content/uploads/2016/06/112.jpg",
     username: "Lucas Garcia",
@@ -165,7 +174,7 @@ export const letters = [
   {
     date: "25/12/2022",
     description: "Letter to the Soldier.",
-    imageId: "img_022",
+    imageId: "img_023",
     imageAddress:
       "https://static.mygov.in/indiancc/2022/03/mygov-1000000000321192616.jpg",
     username: "Isha Kapoor",
@@ -173,18 +182,42 @@ export const letters = [
   {
     date: "15/05/2018",
     description: "Letter to the Soldier.",
-    imageId: "img_023",
+    imageId: "img_024",
     imageAddress:
-      "https://www.forgottensoldiers.org/wp-content/uploads/2017/04/genthankyou-1024x704.jpg",
+      "https://media.iwm.org.uk/cantaloupe/iiif/2/576%7C%7C405%7C%7Clarge_000000.jpg/full/510,/0/default.jpg",
     username: "Aaron Matthews",
   },
   {
     date: "18/09/2021",
     description: "Letter to the Soldier.",
-    imageId: "img_024",
+    imageId: "img_025",
     imageAddress:
       "https://i.pinimg.com/736x/73/6e/b7/736eb73fe15a579a8bdc2ac1128b6e24.jpg",
     username: "Priya Verma",
   },
+  {
+    date: "01/02/2017",
+    description: "Letter to the Soldier.",
+    imageId: "img_026",
+    imageAddress:
+      "https://media.iwm.org.uk/cantaloupe/iiif/2/385%7C%7C31%7C%7Clarge_000000.jpg/full/510,/0/default.jpg",
+    username: "Ethan Patel",
+  },
+  {
+    date: "28/06/2019",
+    description: "Letter to the Soldier.",
+    imageId: "img_027",
+    imageAddress:
+      "https://media.iwm.org.uk/cantaloupe/iiif/2/2%7C%7C10%7C%7C911%7C%7Clarge_Documents_013176.jpg/full/510,/0/default.jpg",
+    username: "Mia Patel",
+  },
+  {
+    date: "10/10/2016",
+    description: "Letter to the Soldier.",
+    imageId: "img_028",
+    imageAddress:
+      "https://media.iwm.org.uk/cantaloupe/iiif/2/453%7C%7C754%7C%7Clarge_000000.jpg/full/510,/0/default.jpg",
+    username: "Liam Patel",
+  },
 ];
-export const bgFileUpload = "./images/soldier.webp"
+export const bgFileUpload = "./images/soldier.webp";

@@ -15,17 +15,53 @@ import CustomizedDialogs from "./Dialog";
 
 const LetterCard = ({ letterData }) => {
   const [openPopup, setOpenPopup] = React.useState(false);
+  const [isFavorite, setIsFavorite] = React.useState(false);
 
-  const handleClickOpen = () => {
-    setOpenPopup(true);
+  // ✅ Toggle favorite state
+  const handleFavoriteClick = () => {
+    setIsFavorite((prev) => !prev);
+
+    // Optionally persist favorite to localStorage or API
+    const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+    if (!isFavorite) {
+      favorites.push(letterData);
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+    } else {
+      const updatedFavorites = favorites.filter(
+        (item) => item.id !== letterData.id
+      );
+      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+    }
   };
 
-  const handleClosePopup = () => {
-    setOpenPopup(false);
+  // ✅ Handle share (native share or clipboard fallback)
+  const handleShareClick = async () => {
+    const shareData = {
+      title: letterData.username,
+      text: letterData.description,
+      url: letterData.imageAddress,
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else {
+        await navigator.clipboard.writeText(
+          `${letterData.username}: ${letterData.description} (${letterData.imageAddress})`
+        );
+        alert("Copied to clipboard!");
+      }
+    } catch (err) {
+      console.error("Error sharing:", err);
+      alert("Sharing failed. Try manually copying the link.");
+    }
   };
+
+  const handleClickOpen = () => setOpenPopup(true);
+  const handleClosePopup = () => setOpenPopup(false);
 
   const dateFormat = (date) => {
-    const [day, month, year] = date.split("/"); // Destructure to directly extract day, month, and year
+    const [day, month, year] = date.split("/");
     const months = [
       "Jan",
       "Feb",
@@ -73,26 +109,28 @@ const LetterCard = ({ letterData }) => {
           }
           subheader={dateFormat(letterData.date)}
         />
+
         <CardMedia
           onClick={handleClickOpen}
           component="img"
           image={letterData.imageAddress}
           alt={letterData.description}
           sx={{
-            flexGrow: 1, // Allows the image to expand dynamically
+            flexGrow: 1,
             width: "100%",
             height: "50%",
-            objectFit: "contain", // Ensures no cropping
-            backgroundColor: "#f0f0f0", // Neutral background
-            padding: 1, // Adds padding for better spacing
+            objectFit: "contain",
+            backgroundColor: "#f0f0f0",
+            padding: 1,
           }}
         />
+
         <CardContent
           sx={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "flex-start",
-            paddingBottom: 0, // Removes extra padding to keep content aligned
+            paddingBottom: 0,
           }}
         >
           <Typography
@@ -103,32 +141,36 @@ const LetterCard = ({ letterData }) => {
               textOverflow: "ellipsis",
               display: "-webkit-box",
               WebkitBoxOrient: "vertical",
-              WebkitLineClamp: 3, // Limit description to 3 lines
+              WebkitLineClamp: 3,
             }}
           >
             {letterData.description}
           </Typography>
         </CardContent>
+
         <CardActions
           disableSpacing
-          // sx={{
-          //   justifyContent: "space-between", // Ensures icons are spread out
-          //   borderTop: "1px solid #e0e0e0", // Optional: Adds a divider at the top
-          // }}
           className="flex justify-between border-t border-gray-300"
         >
-          <IconButton aria-label="add to favorites">
-            <FavoriteIcon />
+          {/* ❤️ Favorite toggle */}
+          <IconButton
+            aria-label="add to favorites"
+            onClick={handleFavoriteClick}
+          >
+            <FavoriteIcon sx={{ color: isFavorite ? "red" : "gray" }} />
           </IconButton>
-          <IconButton aria-label="share">
+
+          {/* 📤 Share functionality */}
+          <IconButton aria-label="share" onClick={handleShareClick}>
             <ShareIcon />
           </IconButton>
         </CardActions>
       </Card>
+
       <CustomizedDialogs
-        open={openPopup} // Dialog state
-        handleClose={handleClosePopup} // Function to close the dialog
-        letterData={letterData} // Pass letter data to the popup
+        open={openPopup}
+        handleClose={handleClosePopup}
+        letterData={letterData}
       />
     </div>
   );
