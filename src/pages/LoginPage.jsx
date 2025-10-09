@@ -8,9 +8,9 @@ import PageLayout from "../Components/PageLayout";
 
 const LoginPage = () => {
   const navigate = useNavigate();
-  const [formValues, setFormValues] = useState({});
+  const [formValues, setFormValues] = useState(null);
 
-  // Form validation schema using Yup
+  // ✅ Yup validation schema
   const validationSchema = Yup.object({
     email: Yup.string()
       .email("Invalid email format")
@@ -20,10 +20,39 @@ const LoginPage = () => {
       .required("Password is required"),
   });
 
+  // ✅ Handle login logic
   const handleSubmit = (values, { resetForm }) => {
-    console.log("Form Data Submitted:", values);
-    setFormValues(values); // Save form values for backend access
-    resetForm();
+    console.log("🟢 Login Attempt:", values);
+
+    // Get all registered users from localStorage
+    const registeredUsers =
+      JSON.parse(localStorage.getItem("registeredUsers")) || [];
+
+    // Find if email + password match
+    const existingUser = registeredUsers.find(
+      (user) => user.email === values.email && user.password === values.password
+    );
+
+    if (existingUser) {
+      // ✅ Save logged-in user info
+      localStorage.setItem("loggedInUser", JSON.stringify(existingUser));
+      setFormValues(values);
+
+      // ✅ Debug info
+      console.group("✅ Login Successful");
+      console.log("Logged In User:", existingUser);
+      console.log("All Registered Users:", registeredUsers);
+      console.groupEnd();
+
+      alert(`Welcome back, ${existingUser.userName || "User"}!`);
+      resetForm();
+
+      // Redirect to dashboard/home if needed
+      // navigate("/dashboard"); // optional
+    } else {
+      console.warn("❌ Invalid Credentials");
+      alert("Invalid email or password. Please try again.");
+    }
   };
 
   return (
@@ -91,6 +120,12 @@ const LoginPage = () => {
             </Form>
           )}
         </Formik>
+
+        {formValues && (
+          <div className="mt-4 text-gray-600 text-sm">
+            Last login attempt with: <strong>{formValues.email}</strong>
+          </div>
+        )}
       </LoginLayout>
     </PageLayout>
   );

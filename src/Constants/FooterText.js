@@ -1,4 +1,3 @@
-// src/constants/footerText.js
 const footerText = {
   logo: {
     src: "https://cdn.pixabay.com/photo/2022/09/05/15/15/indian-flag-7434395_640.jpg",

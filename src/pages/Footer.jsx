@@ -32,7 +32,7 @@ function Footer() {
             className="rounded-full w-36 h-36"
           />
           <Typography className="w-[80%] text-center">
-            <p>{footerText.logo.description}</p>
+            {footerText.logo.description}
           </Typography>
         </Box>
 
