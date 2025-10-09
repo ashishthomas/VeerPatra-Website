@@ -102,6 +102,9 @@ const LoginPage = () => {
                     variant="contained"
                     type="submit"
                     className="px-5 py-2 font-semibold hover:bg-[#1abc9c] shadow-lg shadow-black/20"
+                    onClick={() => {
+                      navigate("/");
+                    }}
                   >
                     Login
                   </Button>
