@@ -37,25 +37,27 @@ function Footer() {
         </Box>
 
         {/* Footer sections */}
-        {footerText.sections.map((section, index) => (
+        {footerText.sections.map((section) => (
           <Box
-            key={index}
+            key={section.title} // ✅ stable unique key
             className="w-full flex justify-around lg:w-1/5 md:w-1/4"
           >
             <List>
               <ListItem className="font-bold">{section.title}</ListItem>
 
               {/* Normal list items */}
-              {section.items &&
-                section.items.map((item, i) => (
-                  <ListItem key={i}>{item}</ListItem>
-                ))}
+              {section.items?.map((item) => (
+                <ListItem key={`${section.title}-${item}`}>{item}</ListItem>
+              ))}
 
               {/* Social media section */}
-              {section.social && (
+              {section.social?.length > 0 && (
                 <Box className="flex flex-col pl-5">
-                  {section.social.map((social, i) => (
-                    <ListItem key={i} className={social.color}>
+                  {section.social.map((social) => (
+                    <ListItem
+                      key={`${section.title}-${social.name}`}
+                      className={social.color}
+                    >
                       {renderSocialIcon(social.name)}
                     </ListItem>
                   ))}
