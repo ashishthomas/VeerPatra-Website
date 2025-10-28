@@ -107,7 +107,7 @@ export const letters = [
     description: "Letter to the Soldier.",
     imageId: "img_014",
     imageAddress:
-      "https://lh6.googleusercontent.com/proxy/LeceQshTzP11D-cKbnTErDA1rZsVHQiZyW0yG7W20jMoCLuJDZyLxOHvfqy5w3iYIEMEMMDvTmdVK-IqLnqwLoT5ZSSqRR0ao2NOcj2p7RoVPAybRHrpm6RIxiROGsopawz780QZ3uy5EC3QExf5xaYbHKKHHgTwL9R_5Jze_nlp6i07e_yrrbh0NDGe0wEsAw",
+      "https://media.gettyimages.com/id/2194089268/photo/sumy-ukraine-a-hand-written-letter-with-a-message-from-north-korean-leader-kim-jong-un-found.jpg?s=612x612&w=0&k=20&c=YTedpbnA08PDxa4VxND1zfomd2r8HPcf2J3xbPH3wt0=",
     username: "Liam Johnson",
   },
   {
