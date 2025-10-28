@@ -65,11 +65,11 @@ const Carousel = () => {
       className="h-[100vh] sm:60vh md:70vh"
     >
       {/* Carousel Inner */}
-      {images.map((image, index) => (
+      {images.map((image) => (
         <Box
-          key={index}
+          key={image.src || image.title}
           className={`absolute top-0 left-0 w-full h-full ${
-            index === activeIndex ? "block" : "hidden"
+            image === images[activeIndex] ? "block" : "hidden"
           } z-[1]`}
         >
           <img
