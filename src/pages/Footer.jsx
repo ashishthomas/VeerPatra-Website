@@ -39,7 +39,7 @@ function Footer() {
         {/* Footer sections */}
         {footerText.sections.map((section) => (
           <Box
-            key={section.title} // ✅ stable unique key
+            key={section.title}
             className="w-full flex justify-around lg:w-1/5 md:w-1/4"
           >
             <List>

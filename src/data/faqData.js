@@ -2,21 +2,21 @@ export const faqData = [
   {
     title: "General settings",
     content:
-      "Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feAliquam eget maximus est, id dignissim quam.",
+      "Access and manage your VeerPatra account settings, including profile information, notification preferences, and language settings. You can also customize your dashboard view and update your contact information here.",
   },
   {
     title: "Users",
     content:
-      "Donec placerat, lectus sed mattis semper, neque lectus feugiat lectusvarius pulvinar diam eros in elit. Pellentesque convallis laoreet laoreet.",
+      "Create and manage user profiles for veterans, family members, and service personnel. Set up different access levels, manage permissions, and track user activities. Add or remove authorized family members and update beneficiary information as needed.",
   },
   {
     title: "Advanced settings",
     content:
-      "Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros, vitae egestas augue. Duis vel est augue.",
+      "Configure advanced features such as two-factor authentication, document verification settings, and automated notifications. Set up custom alerts for important dates, document renewals, and benefit updates. Manage your privacy settings and data sharing preferences.",
   },
   {
     title: "Personal data",
     content:
-      "Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros, vitae egestas augue. Duis vel est augue.",
+      "View and update your personal information including service records, medical history, and benefit details. All personal data is encrypted and securely stored following government guidelines. You can request data exports or updates through the dedicated portal.",
   },
 ];
