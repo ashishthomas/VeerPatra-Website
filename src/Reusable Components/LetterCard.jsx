@@ -18,19 +18,23 @@ const LetterCard = ({ letterData }) => {
   const [isFavorite, setIsFavorite] = React.useState(false);
 
   // ✅ Toggle favorite state
+
   const handleFavoriteClick = () => {
     setIsFavorite((prev) => !prev);
 
     // Optionally persist favorite to localStorage or API
     const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
-    if (!isFavorite) {
-      favorites.push(letterData);
-      localStorage.setItem("favorites", JSON.stringify(favorites));
-    } else {
+
+    if (isFavorite) {
+      // Remove from favorites
       const updatedFavorites = favorites.filter(
         (item) => item.id !== letterData.id
       );
       localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+    } else {
+      // Add to favorites
+      favorites.push(letterData);
+      localStorage.setItem("favorites", JSON.stringify(favorites));
     }
   };
 
