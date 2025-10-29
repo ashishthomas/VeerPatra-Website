@@ -92,8 +92,6 @@ const Navbar = ({ isLoggedIn }) => {
               background: `linear-gradient(to bottom, #FF9933, #FFFFFF, #138808)`,
               height: "100%",
             }}
-            role="navigation"
-            aria-label="Main menu"
           >
             <List>
               {links.map(
