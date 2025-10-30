@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Box, Typography, IconButton } from "@mui/material";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
-import img1 from "../utils/images/1.webp";
-import img2 from "../utils/images/2.webp";
-import img3 from "../utils/images/soldier.webp";
+import img1 from "../utils/images/soldier-letter.png";
+import img2 from "../utils/images/soldier-warrior.png";
+import img3 from "../utils/images/soldier-remembrance.png";
+import img4 from "../utils/images/soldier.png";
+import img5 from "../utils/images/soldier-letter2.png";
 
 const Carousel = () => {
   const images = [
@@ -18,17 +20,17 @@ const Carousel = () => {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
-      src: img1,
+      src: img3,
       title: "Third slide label",
       text: "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
     },
     {
-      src: img3,
+      src: img4,
       title: "Fourth slide label",
       text: "Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.",
     },
     {
-      src: img2,
+      src: img5,
       title: "Fifth slide label",
       text: "Cras ultricies ligula sed magna dictum porta.",
     },

@@ -220,4 +220,4 @@ export const letters = [
     username: "Liam Patel",
   },
 ];
-export const bgFileUpload = "./images/soldier.webp";
+export const bgFileUpload = "./images/soldier.png";

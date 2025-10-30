@@ -5,7 +5,7 @@ import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { styled } from "@mui/material/styles";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import bgFileUpload from "../utils/images/soldier.webp";
+import bgFileUpload from "../utils/images/soldier.png";
 import PageLayout from "../Components/PageLayout";
 import { soldierQuotes } from "../data/quotesData";
 
