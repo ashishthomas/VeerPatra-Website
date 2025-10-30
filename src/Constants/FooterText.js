@@ -32,7 +32,7 @@ const footerText = {
   ],
 
   copyright: {
-    text: "© 2024 Copyright. OperationGratitude.com",
+    text: "© 2025 Copyright. OperationGratitude.com",
   },
 };
 
