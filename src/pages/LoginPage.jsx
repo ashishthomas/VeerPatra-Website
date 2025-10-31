@@ -47,8 +47,8 @@ const LoginPage = () => {
       alert(`Welcome back, ${existingUser.userName || "User"}!`);
       resetForm();
 
-      // Redirect to dashboard/home if needed
-      // navigate("/dashboard"); // optional
+      // ✅ Redirect after successful validation and login
+      navigate("/");
     } else {
       console.warn("❌ Invalid Credentials");
       alert("Invalid email or password. Please try again.");
@@ -97,17 +97,17 @@ const LoginPage = () => {
                   spacing={2}
                   justifyContent="space-between"
                 >
+                  {/* ✅ No navigate onClick here - Formik handles validation first */}
                   <Button
                     sx={{ backgroundColor: "#16a085" }}
                     variant="contained"
                     type="submit"
                     className="px-5 py-2 font-semibold hover:bg-[#1abc9c] shadow-lg shadow-black/20"
-                    onClick={() => {
-                      navigate("/");
-                    }}
                   >
                     Login
                   </Button>
+
+                  {/* Register button keeps navigation */}
                   <Button
                     variant="contained"
                     sx={{ backgroundColor: "#e74c3c" }}
